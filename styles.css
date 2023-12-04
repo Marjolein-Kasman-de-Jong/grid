@@ -19,15 +19,30 @@ body {
 
 .container {
     display: grid;
-    grid-template-rows: 50px 190px 100px auto 50px;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50px auto 50px 50px 50px 50px 50px;
+    grid-template-columns: 1fr;
     grid-template-areas: 
-        "a c c"
-        "b c c"
-        "b e d"
-        "b e ."
-        "f f f";
+        "a"
+        "b"
+        "c"
+        "d"
+        "e"
+        "."
+        "f";
     gap: 16px;
+
+    @media screen and (min-width: 992px) {
+        display: grid;
+        grid-template-rows: 50px 190px 100px auto 50px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 
+            "a c c"
+            "b c c"
+            "b e d"
+            "b e ."
+            "f f f";
+        gap: 16px;
+    }
 }
 
 .item {
